@@ -17,6 +17,7 @@ ON c.product_id = p.product_id;
 #### Results; A list of customer names and the product names they purchased
 
 
+
 ### 2) LEFT JOIN
 #### A left join returns all the rows from the left table and the matching rows from the right table. If there are no matches, the results set will contain NULL values for the right table columns.
 #### Example: Suppose we want to find all customer names and the products name they purchased if any.
@@ -30,6 +31,7 @@ LEFT JOIN products_info p
 ON c.product_id = p.product_id;
 
 #### Results: A list of all customers names along with the product names they purchased. If they didn't purchase any product then the row on that product column will return NULL
+
 
 
 ### 3) RIGHT JOIN 
@@ -46,6 +48,8 @@ ON c.product_id = p.product_id;
 
 #### Results: A list of products names, along with the customers names if the products have a matching customer. If the product does not have a matching customer, then the customer name column will return NULL
 
+
+
 ### 4) FULL JOIN
 #### A full join returns all rows from both tables, with NULL values in the columns where there are no matches.
 #### Suppose we want to find all customer names and product names, including those without matches.
@@ -60,6 +64,8 @@ ON c.product_id = p.product_id;
 
 #### Results: A list of all customers names and products names, with NULL values in the columns where there are no matches.
 
+
+
 ### 5) CROSS JOIN 
 #### A Cross join returns the cartesian product of rows from both tables. Each row of one table is combined with each row of the other table.
 #### Example: Suppose we want to find all possible combinations of customers names and products names
@@ -70,6 +76,8 @@ SELECT
      p.product_name
 FROM customers_sales c
 CROSS JOIN products p;
+
+
 
 ### 6) STRAIGHT JOIN 
 #### How it works
@@ -85,6 +93,7 @@ STRAIGHT_JOIN products_info AS  p
 ON c.product_id = p.product_id;
 
 
+
 ### 7) NATURAL JOIN
 #### how it functions
 #### Is a type of join that combines rows from two tables based on all columns with the same names
@@ -94,6 +103,7 @@ ON c.product_id = p.product_id;
 SELECT *
 FROM customers_sales
 NATURAL JOIN products_info;
+
 
 
 ### 8) UNION
@@ -109,6 +119,8 @@ UNION
 SELECT product_id,
 product_name
 FROM products_info;
+
+
 
 ### 9) UNION ALL
 #### How it works
