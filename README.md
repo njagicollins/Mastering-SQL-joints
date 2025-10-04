@@ -24,9 +24,7 @@ ON c.product_id = p.product_id;
 #### A left join returns all the rows from the left table and the matching rows from the right table. If there are no matches, the results set will contain NULL values for the right table columns.
 #### Example: Suppose we want to find all customer names and the products name they purchased if any.
 
-## 2) LEFT JOIN
-# A left join returns all the rows from the left table and the matching rows from the right table. If there are no matches, the results set will contain NULL values for the right table columns.
-# Example: Suppose we want to find all customer names and the products name they purchased if any.
+
 ```sql
 SELECT 
    customer_name,
